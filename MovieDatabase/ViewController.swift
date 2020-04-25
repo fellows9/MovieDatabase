@@ -77,7 +77,6 @@ class ViewController: UIViewController {
         } else {
             DispatchQueue.main.async { [weak self] in
                 self?.displayNoResults()
-                self?.checkConnectivity()
             }
         }
         
