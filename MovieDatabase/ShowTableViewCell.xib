@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShowTableViewCell" rowHeight="138" id="KGk-i7-Jjw" customClass="ShowTableViewCell" customModule="MovieDatabase" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="138"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="360" height="138"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VDo-Id-yzx">
+                        <rect key="frame" x="15" y="10" width="66.5" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="0TA-N5-F1O"/>
+                            <constraint firstAttribute="width" secondItem="VDo-Id-yzx" secondAttribute="height" multiplier="2:3" id="mO5-d2-VrI"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Is A Movie Title Example" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6y-vf-jRa">
+                        <rect key="frame" x="96.5" y="48" width="252" height="24"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VDo-Id-yzx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="GyW-Ku-fwi"/>
+                    <constraint firstItem="q6y-vf-jRa" firstAttribute="centerY" secondItem="VDo-Id-yzx" secondAttribute="centerY" id="RGr-oC-BEe"/>
+                    <constraint firstItem="q6y-vf-jRa" firstAttribute="leading" secondItem="VDo-Id-yzx" secondAttribute="trailing" constant="15" id="anf-hL-nth"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="q6y-vf-jRa" secondAttribute="trailing" constant="10" id="doM-vw-ZR5"/>
+                    <constraint firstItem="VDo-Id-yzx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ell-hs-wln"/>
+                    <constraint firstAttribute="bottom" secondItem="VDo-Id-yzx" secondAttribute="bottom" constant="10" id="vaL-9P-Pse"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="posterImageView" destination="VDo-Id-yzx" id="gRh-pz-jLr"/>
+                <outlet property="titleLabel" destination="q6y-vf-jRa" id="QM3-eZ-Yt5"/>
+            </connections>
+            <point key="canvasLocation" x="166.66666666666669" y="132.58928571428572"/>
+        </tableViewCell>
+    </objects>
+</document>
