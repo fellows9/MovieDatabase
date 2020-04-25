@@ -19,8 +19,6 @@ class WebService: NSObject {
                 completion(nil)
                 return
             }
-            let sessionConfiguration = URLSessionConfiguration.default
-            let session = URLSession(configuration: sessionConfiguration)
 
             var parameters = [String : String]()
             parameters["s"] = searchValue.trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: " ", with: "+")
@@ -30,6 +28,7 @@ class WebService: NSObject {
             parameters["apikey"] = "925fc6b5"
         
             let url = self.add(parameters, to: baseURL)
+            let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url, completionHandler: { (data, response, error) in
                 completion(data)
             })
